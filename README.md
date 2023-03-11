@@ -9,7 +9,7 @@ yarn
 
 ## Development server
 
-Run `yarn nx start my-app` for a dev server. Navigate to http://localhost:8000/
+Run `yarn start` for a dev server. Navigate to http://localhost:8000
 
 
 ## Further help
