@@ -8,12 +8,49 @@
     "test": "nx test"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "core-js": "^3.15.1",
+    "nuxt": "^2.16.0",
+    "vue": "2.7.14",
+    "tslib": "^2.3.0"
+  },
   "devDependencies": {
-    "nx": "14.4.2",
     "@nrwl/cli": "14.4.2",
+    "@nrwl/eslint-plugin-nx": "14.8.7",
+    "@nrwl/jest": "14.8.7",
+    "@nrwl/linter": "14.8.7",
     "@nrwl/workspace": "14.4.2",
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
+    "@nuxt/types": "^2.15.7",
+    "@nuxtjs/eslint-config-typescript": "^9.0.0",
+    "vue-template-compiler": "2.7.14",
+    "@types/jest": "28.1.1",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vue/test-utils": "^1.0.3",
+    "@vue/vue2-jest": "^27.0.0-alpha.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "eslint": "~8.15.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-nuxt": "^3.2.0",
+    "jest": "28.1.1",
+    "jest-environment-jsdom": "28.1.1",
+    "nx": "14.4.2",
+    "prettier": "^2.6.2",
+    "ts-jest": "28.0.5",
+    "ts-loader": "^8.3.0",
+    "ts-node": "10.9.1",
+
+    "@vue/cli-plugin-babel": "~4.5.18",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-plugin-pwa": "4.5.18",
+    "@vue/cli-plugin-router": "~4.5.18",
+    "@vue/cli-plugin-typescript": "~4.5.18",
+    "@vue/cli-plugin-unit-jest": "~4.5.18",
+    "@vue/cli-plugin-vuex": "~5.0.4",
+    "@vue/cli-service": "~4.5.18",
     "typescript": "~4.7.2",
-    "prettier": "^2.6.2"
+    "vite": "^3.2.0"
   }
 }

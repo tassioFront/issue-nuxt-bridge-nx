@@ -1,0 +1,75 @@
+{
+  "name": "my-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/my-app/src",
+  "targets": {
+    "start": {
+      "executor": "nx:run-commands",
+
+      "options": {
+        "cwd": "apps/my-app",
+        "dest": "dist",
+        "outputs": ["{options.outputFile}"],
+
+
+        "commands": [
+          {
+            "forwardAllArgs": true,
+            "command": "nuxi dev --port 8000"
+          }
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx-plus/nuxt:browser",
+      "options": {
+        "buildDir": "dist/apps/my-app"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx-plus/nuxt:server",
+      "options": {
+        "browserTarget": "my-app:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "my-app:build:production",
+          "dev": false
+        }
+      }
+    },
+    "static": {
+      "executor": "@nx-plus/nuxt:static",
+      "options": {
+        "browserTarget": "my-app:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/my-app/**/*.{ts,tsx,vue}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/my-app"
+      ],
+      "options": {
+        "jestConfig": "apps/my-app/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
